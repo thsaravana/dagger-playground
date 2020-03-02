@@ -44,3 +44,36 @@ com.madrapps.dagger.component.module.binds.BindModule is listed as a module, but
 
         <br>
 
+@Binds methods of type map must declare a map key
+    abstract Vehicle getCar(Car car);
+                     ^
+@Binds methods of type map must declare a map key
+    abstract Vehicle getTruck(Truck truck);
+                     ^
+                     
+     <br>
+
+
+
+    @Module
+    public abstract class IntoMapModule {
+
+        @Binds
+        @IntoMap
+        @StringKey("car")
+        abstract Vehicle getCar(Car car);
+        
+        @Provides
+        @IntoMap
+        @StringKey("truck")
+        Vehicle getTruck() {
+            return new Truck();
+        }
+    }
+
+A @Module may not contain both non-static and abstract binding methods
+public abstract class IntoMapModule {
+                ^                
+                
+      <br>
+      
