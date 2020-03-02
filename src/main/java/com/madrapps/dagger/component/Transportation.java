@@ -15,6 +15,8 @@ import com.madrapps.dagger.component.module.provides.stat.DaggerStaticProvideCom
 import com.madrapps.dagger.component.module.provides.stat.StaticProvideComponent;
 import com.madrapps.dagger.component.multibindings.intomap.binds.DaggerIntoMapBindsComponent;
 import com.madrapps.dagger.component.multibindings.intomap.binds.IntoMapBindsComponent;
+import com.madrapps.dagger.component.multibindings.intomap.multimodule.DaggerIntoMapMultiModuleComponent;
+import com.madrapps.dagger.component.multibindings.intomap.multimodule.IntoMapMultiModuleComponent;
 import com.madrapps.dagger.component.multibindings.intomap.provides.DaggerIntoMapProvidesComponent;
 import com.madrapps.dagger.component.multibindings.intomap.provides.IntoMapProvidesComponent;
 
@@ -47,5 +49,9 @@ public class Transportation {
         IntoMapProvidesComponent intoMapProvidesComponent = DaggerIntoMapProvidesComponent.create();
         Alley alley1 = intoMapProvidesComponent.alley();
         System.out.println(alley1.vehicleMap);
+
+        IntoMapMultiModuleComponent intoMapMultiModuleComponent = DaggerIntoMapMultiModuleComponent.create();
+        Alley alley2 = intoMapMultiModuleComponent.alley();
+        System.out.println(alley2.vehicleMap);
     }
 }
