@@ -10,6 +10,8 @@ import com.madrapps.dagger.component.module.empty.DaggerEmptyModuleComponent;
 import com.madrapps.dagger.component.module.empty.EmptyModuleComponent;
 import com.madrapps.dagger.component.module.provides.DaggerProvideComponent;
 import com.madrapps.dagger.component.module.provides.ProvideComponent;
+import com.madrapps.dagger.component.module.provides.stat.DaggerStaticProvideComponent;
+import com.madrapps.dagger.component.module.provides.stat.StaticProvideComponent;
 
 public class Transportation {
 
@@ -27,7 +29,10 @@ public class Transportation {
 
         EmptyModuleComponent emptyModuleComponent = DaggerEmptyModuleComponent.create();
 
-        ProvideComponent produceComponent = DaggerProvideComponent.create();
-        MudTrail mudTrail1 = produceComponent.mudTrail();
+        ProvideComponent provideComponent = DaggerProvideComponent.create();
+        MudTrail mudTrail1 = provideComponent.mudTrail();
+
+        StaticProvideComponent staticProvideComponent = DaggerStaticProvideComponent.create();
+        MudTrail mudTrail2 = staticProvideComponent.mudTrail();
     }
 }
