@@ -4,8 +4,10 @@ import com.madrapps.dagger.component.di.*;
 import com.madrapps.dagger.component.models.Car;
 import com.madrapps.dagger.component.models.Highways;
 import com.madrapps.dagger.component.models.MudTrail;
-import com.madrapps.dagger.component.module.BindComponent;
-import com.madrapps.dagger.component.module.DaggerBindComponent;
+import com.madrapps.dagger.component.module.binds.BindComponent;
+import com.madrapps.dagger.component.module.binds.DaggerBindComponent;
+import com.madrapps.dagger.component.module.empty.DaggerEmptyModuleComponent;
+import com.madrapps.dagger.component.module.empty.EmptyModuleComponent;
 
 public class Transportation {
 
@@ -20,5 +22,9 @@ public class Transportation {
 
         BindComponent bindComponent = DaggerBindComponent.create();
         MudTrail mudTrail = bindComponent.mudTrail();
+
+        EmptyModuleComponent emptyModuleComponent = DaggerEmptyModuleComponent.create();
+
+
     }
 }

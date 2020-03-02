@@ -1,4 +1,4 @@
-package com.madrapps.dagger.component.module;
+package com.madrapps.dagger.component.module.binds;
 
 import com.madrapps.dagger.component.models.Car;
 import com.madrapps.dagger.component.models.Vehicle;
