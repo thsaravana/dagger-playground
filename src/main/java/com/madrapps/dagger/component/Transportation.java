@@ -1,10 +1,8 @@
 package com.madrapps.dagger.component;
 
-import com.madrapps.dagger.component.di.DaggerEmptyComponent;
-import com.madrapps.dagger.component.di.DaggerSimpleComponent;
-import com.madrapps.dagger.component.di.EmptyComponent;
-import com.madrapps.dagger.component.di.SimpleComponent;
+import com.madrapps.dagger.component.di.*;
 import com.madrapps.dagger.component.models.Car;
+import com.madrapps.dagger.component.models.Highways;
 
 public class Transportation {
 
@@ -13,5 +11,8 @@ public class Transportation {
 
         SimpleComponent diComponent = DaggerSimpleComponent.create();
         Car car = diComponent.car();
+
+        DependentComponent dependentComponent = DaggerDependentComponent.create();
+        Highways highways = dependentComponent.highways();
     }
 }
