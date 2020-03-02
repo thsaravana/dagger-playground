@@ -8,6 +8,8 @@ import com.madrapps.dagger.component.module.binds.BindComponent;
 import com.madrapps.dagger.component.module.binds.DaggerBindComponent;
 import com.madrapps.dagger.component.module.empty.DaggerEmptyModuleComponent;
 import com.madrapps.dagger.component.module.empty.EmptyModuleComponent;
+import com.madrapps.dagger.component.module.provides.DaggerProvideComponent;
+import com.madrapps.dagger.component.module.provides.ProvideComponent;
 
 public class Transportation {
 
@@ -25,6 +27,7 @@ public class Transportation {
 
         EmptyModuleComponent emptyModuleComponent = DaggerEmptyModuleComponent.create();
 
-
+        ProvideComponent produceComponent = DaggerProvideComponent.create();
+        MudTrail mudTrail1 = produceComponent.mudTrail();
     }
 }
