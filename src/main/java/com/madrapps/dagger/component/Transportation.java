@@ -21,6 +21,9 @@ import com.madrapps.dagger.component.multibindings.intomap.provides.DaggerIntoMa
 import com.madrapps.dagger.component.multibindings.intomap.provides.IntoMapProvidesComponent;
 import com.madrapps.dagger.component.multibindings.intomap.provides.stat.DaggerIntoMapStaticProvidesComponent;
 import com.madrapps.dagger.component.multibindings.intomap.provides.stat.IntoMapStaticProvidesComponent;
+import com.madrapps.dagger.component.singleton.DaggerSingletenComponent;
+import com.madrapps.dagger.component.singleton.Railways;
+import com.madrapps.dagger.component.singleton.SingletenComponent;
 
 public class Transportation {
 
@@ -59,5 +62,10 @@ public class Transportation {
         IntoMapStaticProvidesComponent intoMapStaticProvidesComponent = DaggerIntoMapStaticProvidesComponent.create();
         Alley alley3 = intoMapStaticProvidesComponent.alley();
         System.out.println(alley3.vehicleMap);
+
+        SingletenComponent singletenComponent = DaggerSingletenComponent.create();
+        Railways railways1 = singletenComponent.railways();
+        Railways railways2 = singletenComponent.railways();
+        System.out.println("Is Singleton = " + (railways1 == railways2));
     }
 }
