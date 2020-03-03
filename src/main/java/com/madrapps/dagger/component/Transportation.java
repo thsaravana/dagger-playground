@@ -1,10 +1,7 @@
 package com.madrapps.dagger.component;
 
 import com.madrapps.dagger.component.di.*;
-import com.madrapps.dagger.component.models.Alley;
-import com.madrapps.dagger.component.models.Car;
-import com.madrapps.dagger.component.models.Highways;
-import com.madrapps.dagger.component.models.MudTrail;
+import com.madrapps.dagger.component.models.*;
 import com.madrapps.dagger.component.module.binds.BindComponent;
 import com.madrapps.dagger.component.module.binds.DaggerBindComponent;
 import com.madrapps.dagger.component.module.empty.DaggerEmptyModuleComponent;
@@ -24,6 +21,8 @@ import com.madrapps.dagger.component.multibindings.intomap.provides.stat.IntoMap
 import com.madrapps.dagger.component.singleton.DaggerSingletenComponent;
 import com.madrapps.dagger.component.singleton.Railways;
 import com.madrapps.dagger.component.singleton.SingletenComponent;
+import com.madrapps.dagger.component.singleton.provides.DaggerSingletenProvidesComponent;
+import com.madrapps.dagger.component.singleton.provides.SingletenProvidesComponent;
 
 public class Transportation {
 
@@ -67,5 +66,10 @@ public class Transportation {
         Railways railways1 = singletenComponent.railways();
         Railways railways2 = singletenComponent.railways();
         System.out.println("Is Singleton = " + (railways1 == railways2));
+
+        SingletenProvidesComponent singletenProvidesComponent = DaggerSingletenProvidesComponent.create();
+        Truck truck1 = singletenProvidesComponent.truck();
+        Truck truck2 = singletenProvidesComponent.truck();
+        System.out.println("Is Singleton = " + (truck1 == truck2));
     }
 }
