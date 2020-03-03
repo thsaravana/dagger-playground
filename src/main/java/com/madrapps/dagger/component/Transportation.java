@@ -23,6 +23,8 @@ import com.madrapps.dagger.component.singleton.Railways;
 import com.madrapps.dagger.component.singleton.SingletenComponent;
 import com.madrapps.dagger.component.singleton.provides.DaggerSingletenProvidesComponent;
 import com.madrapps.dagger.component.singleton.provides.SingletenProvidesComponent;
+import com.madrapps.dagger.component.singleton.provides.stat.DaggerSingletenStaticProvidesComponent;
+import com.madrapps.dagger.component.singleton.provides.stat.SingletenStaticProvidesComponent;
 
 public class Transportation {
 
@@ -71,5 +73,10 @@ public class Transportation {
         Truck truck1 = singletenProvidesComponent.truck();
         Truck truck2 = singletenProvidesComponent.truck();
         System.out.println("Is Singleton = " + (truck1 == truck2));
+
+        SingletenStaticProvidesComponent singletenStaticProvidesComponent = DaggerSingletenStaticProvidesComponent.create();
+        Truck truck3 = singletenStaticProvidesComponent.truck();
+        Truck truck4 = singletenStaticProvidesComponent.truck();
+        System.out.println("Is Singleton = " + (truck3 == truck4));
     }
 }
