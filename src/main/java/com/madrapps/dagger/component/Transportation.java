@@ -1,6 +1,6 @@
 package com.madrapps.dagger.component;
 
-import com.madrapps.dagger.component.di.*;
+import com.madrapps.dagger.component.component.*;
 import com.madrapps.dagger.component.models.*;
 import com.madrapps.dagger.component.module.binds.BindComponent;
 import com.madrapps.dagger.component.module.binds.DaggerBindComponent;

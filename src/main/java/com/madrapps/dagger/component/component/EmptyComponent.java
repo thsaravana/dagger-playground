@@ -1,4 +1,4 @@
-package com.madrapps.dagger.component.di;
+package com.madrapps.dagger.component.component;
 
 import dagger.Component;
 
