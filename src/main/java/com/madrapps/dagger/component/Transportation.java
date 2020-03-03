@@ -21,6 +21,8 @@ import com.madrapps.dagger.component.multibindings.intomap.provides.stat.IntoMap
 import com.madrapps.dagger.component.singleton.DaggerSingletenComponent;
 import com.madrapps.dagger.component.singleton.Railways;
 import com.madrapps.dagger.component.singleton.SingletenComponent;
+import com.madrapps.dagger.component.singleton.binds.DaggerSingletenBindsComponent;
+import com.madrapps.dagger.component.singleton.binds.SingletenBindsComponent;
 import com.madrapps.dagger.component.singleton.provides.DaggerSingletenProvidesComponent;
 import com.madrapps.dagger.component.singleton.provides.SingletenProvidesComponent;
 import com.madrapps.dagger.component.singleton.provides.stat.DaggerSingletenStaticProvidesComponent;
@@ -78,5 +80,11 @@ public class Transportation {
         Truck truck3 = singletenStaticProvidesComponent.truck();
         Truck truck4 = singletenStaticProvidesComponent.truck();
         System.out.println("Is Singleton = " + (truck3 == truck4));
+
+        SingletenBindsComponent singletenBindsComponent = DaggerSingletenBindsComponent.create();
+        Vehicle vechicle1 = singletenBindsComponent.vechicle();
+        Vehicle vechicle2 = singletenBindsComponent.vechicle();
+        System.out.println("Is Singleton = " + (vechicle1 == vechicle2));
+
     }
 }
