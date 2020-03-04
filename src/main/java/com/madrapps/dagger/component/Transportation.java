@@ -86,5 +86,9 @@ public class Transportation {
         Vehicle vechicle2 = singletenBindsComponent.vechicle();
         System.out.println("Is Singleton = " + (vechicle1 == vechicle2));
 
+        MemberInjectionComponent memberInjectionComponent = DaggerMemberInjectionComponent.create();
+        Street street = new Street();
+        memberInjectionComponent.inject(street);
+        System.out.println("Street Car = " + street.car);
     }
 }
