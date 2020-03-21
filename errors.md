@@ -35,7 +35,7 @@ Dagger does not support injection into private constructors
 
     <br>
     
-com.madrapps.dagger.component.module.binds.BindModule is listed as a module, but is not annotated with @Module
+BindModule is listed as a module, but is not annotated with @Module
 @Component(modules = BindModule.class)
 ^
 @Binds methods can only be present within a @Module or @ProducerModule
@@ -85,11 +85,11 @@ public abstract class IntoMapModule {
     <br>
       
       
-e: /Users/sthiyagaraj/Me/Madrapps/dagger-playground/src/main/java/com/madrapps/dagger/component/singleton/SingletenComponent.java:9: error: [Dagger/IncompatiblyScopedBindings] com.madrapps.dagger.component.singleton.SingletenComponent (unscoped) may not reference scoped bindings:
+e: /Users/sthiyagaraj/Me/Madrapps/dagger-playground/src/main/java/com/madrapps/dagger/component/singleton/SingletenComponent.java:9: error: [Dagger/IncompatiblyScopedBindings] SingletenComponent (unscoped) may not reference scoped bindings:
 
 public interface SingletenComponent {
        ^
-      @Singleton class com.madrapps.dagger.component.singleton.Railways
+      @Singleton class Railways
 
 
     <br>
@@ -100,13 +100,13 @@ public interface SingletenComponent {
     
     <br>
     
-@Component.Factory types must have exactly one abstract method. Already found: build(com.madrapps.dagger.component.subcomponent.Buggy)
+@Component.Factory types must have exactly one abstract method. Already found: build(Buggy)
         EmptySubComponent carry();
                           ^
                           
       <br>
       
-@Component has more than one @Component.Builder or @Component.Factory: [com.madrapps.dagger.component.component.builders.supertype.BuilderComponent.Builder, com.madrapps.dagger.component.component.builders.supertype.BuilderComponent.Factory]
+@Component has more than one @Component.Builder or @Component.Factory: [BuilderComponent.Builder, BuilderComponent.Factory]
 public interface BuilderComponent {
        ^
        
