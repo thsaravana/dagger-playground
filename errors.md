@@ -94,3 +94,33 @@ public interface SingletenComponent {
 
     <br>
     
+@Subcomponent.Factory types must be nested within a @Subcomponent
+    interface Factory {
+    ^
+    
+    <br>
+    
+@Component.Factory types must have exactly one abstract method. Already found: build(com.madrapps.dagger.component.subcomponent.Buggy)
+        EmptySubComponent carry();
+                          ^
+                          
+      <br>
+      
+@Component has more than one @Component.Builder or @Component.Factory: [com.madrapps.dagger.component.component.builders.supertype.BuilderComponent.Builder, com.madrapps.dagger.component.component.builders.supertype.BuilderComponent.Factory]
+public interface BuilderComponent {
+       ^
+       
+       <br>
+       
+Members injection methods may only return the injected type or void.
+    Highways inject(Street street);
+             ^
+             
+     <br>
+     
+Types may only contain one @Inject constructor
+    FactoryModule(Car car) {
+    ^
+    
+    <br>
+    
