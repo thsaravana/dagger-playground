@@ -5,4 +5,8 @@ import dagger.Component;
 @Component
 public interface EmptyComponent {
 
+    @Component
+    interface SomeComponent {
+
+    }
 }
