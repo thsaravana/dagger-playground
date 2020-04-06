@@ -7,4 +7,6 @@ import dagger.Component;
 public interface MemberInjectionComponent {
 
     Street inject(Street street);
+
+    void injection(Street street);
 }
