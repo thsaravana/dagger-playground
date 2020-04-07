@@ -18,6 +18,10 @@ import com.madrapps.dagger.multibindings.intomap.provides.DaggerIntoMapProvidesC
 import com.madrapps.dagger.multibindings.intomap.provides.IntoMapProvidesComponent;
 import com.madrapps.dagger.multibindings.intomap.provides.stat.DaggerIntoMapStaticProvidesComponent;
 import com.madrapps.dagger.multibindings.intomap.provides.stat.IntoMapStaticProvidesComponent;
+import com.madrapps.dagger.multibindings.intoset.binds.DaggerIntoSetBindsComponent;
+import com.madrapps.dagger.multibindings.intoset.binds.IntoSetBindsComponent;
+import com.madrapps.dagger.multibindings.intoset.multimodule.DaggerIntoSetMultiModuleComponent;
+import com.madrapps.dagger.multibindings.intoset.multimodule.IntoSetMultiModuleComponent;
 import com.madrapps.dagger.multibindings.intoset.provides.DaggerIntoSetProvidesComponent;
 import com.madrapps.dagger.multibindings.intoset.provides.IntoSetProvidesComponent;
 import com.madrapps.dagger.qualifiers.DaggerQualifierComponent;
@@ -102,5 +106,14 @@ public class Transportation {
         IntoSetProvidesComponent intoSetProvidesComponent = DaggerIntoSetProvidesComponent.create();
         Riverside riverside = intoSetProvidesComponent.riverSide();
         System.out.println("Vehicles = " + riverside.vehicles);
+
+        IntoSetBindsComponent intoSetBindsComponent = DaggerIntoSetBindsComponent.create();
+        Riverside riverside1 = intoSetBindsComponent.riverside();
+        System.out.println("Vehicles = " + riverside1.vehicles);
+
+        IntoSetMultiModuleComponent intoSetMultiModuleComponent = DaggerIntoSetMultiModuleComponent.create();
+        Riverside riverside2 = intoSetMultiModuleComponent.riverside();
+        System.out.println("Vehicles = " + riverside2.vehicles);
+
     }
 }
