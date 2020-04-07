@@ -128,3 +128,7 @@ error: /Users/sthiyagaraj/Me/Madrapps/dagger-playground/src/main/java/com/madrap
 
     <br>
     
+error: /Users/sthiyagaraj/Me/Madrapps/dagger-playground/src/main/java/com/madrapps/dagger/multibindings/intomap/boxedkeys/IntoMapBoxedKeyComponent.java:9: error: [Dagger/MapKeys] The same map key is bound more than once for java.util.Map<java.lang.Integer,com.madrapps.dagger.models.Vehicle>
+
+    <br>
+
