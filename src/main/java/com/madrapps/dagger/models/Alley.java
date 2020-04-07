@@ -1,5 +1,7 @@
 package com.madrapps.dagger.models;
 
+import dagger.multibindings.Multibinds;
+
 import javax.inject.Inject;
 import java.util.Map;
 

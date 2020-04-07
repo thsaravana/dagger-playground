@@ -124,3 +124,7 @@ Types may only contain one @Inject constructor
     
     <br>
     
+error: /Users/sthiyagaraj/Me/Madrapps/dagger-playground/src/main/java/com/madrapps/dagger/multibindings/intoset/provides/IntoSetProvidesModule.java:18: error: @Provides methods of non map type cannot declare a map key
+
+    <br>
+    

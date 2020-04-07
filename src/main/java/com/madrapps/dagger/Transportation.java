@@ -18,6 +18,8 @@ import com.madrapps.dagger.multibindings.intomap.provides.DaggerIntoMapProvidesC
 import com.madrapps.dagger.multibindings.intomap.provides.IntoMapProvidesComponent;
 import com.madrapps.dagger.multibindings.intomap.provides.stat.DaggerIntoMapStaticProvidesComponent;
 import com.madrapps.dagger.multibindings.intomap.provides.stat.IntoMapStaticProvidesComponent;
+import com.madrapps.dagger.multibindings.intoset.provides.DaggerIntoSetProvidesComponent;
+import com.madrapps.dagger.multibindings.intoset.provides.IntoSetProvidesComponent;
 import com.madrapps.dagger.qualifiers.DaggerQualifierComponent;
 import com.madrapps.dagger.qualifiers.QualifierComponent;
 import com.madrapps.dagger.singleton.DaggerSingletenComponent;
@@ -96,5 +98,9 @@ public class Transportation {
         QualifierComponent qualifierComponent = DaggerQualifierComponent.create();
         Road road = qualifierComponent.mountainRoad();
         System.out.println("Road = " + road);
+
+        IntoSetProvidesComponent intoSetProvidesComponent = DaggerIntoSetProvidesComponent.create();
+        Riverside riverside = intoSetProvidesComponent.riverSide();
+        System.out.println("Vehicles = " + riverside.vehicles);
     }
 }
