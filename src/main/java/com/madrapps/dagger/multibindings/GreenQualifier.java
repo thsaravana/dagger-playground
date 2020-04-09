@@ -1,4 +1,4 @@
-package com.madrapps.dagger.multibindings.intoset.qualifier;
+package com.madrapps.dagger.multibindings;
 
 import javax.inject.Qualifier;
 import java.lang.annotation.Retention;

@@ -1,9 +1,9 @@
-package com.madrapps.dagger.subcomponent;
+package com.madrapps.dagger.subcomponent.direct;
 
 import dagger.Component;
 
 @Component(modules = SampleModule.class)
-public interface EmptyComponent {
+public interface EmptyRootComponent {
 
     EmptySubComponent component();
 }

@@ -1,6 +1,9 @@
 package com.madrapps.dagger.multibindings.intoset.qualifier;
 
 import com.madrapps.dagger.models.Vehicle;
+import com.madrapps.dagger.multibindings.GreenQualifier;
+import com.madrapps.dagger.multibindings.RedQualifier;
+import com.madrapps.dagger.multibindings.intomap.qualifier.SideRoad;
 import dagger.Component;
 
 import java.util.Set;
@@ -13,4 +16,6 @@ public interface IntoSetQualifierComponent {
 
     @GreenQualifier
     Set<Vehicle> greenVehicles();
+
+    MainRoad mainRoad();
 }

@@ -22,6 +22,8 @@ import com.madrapps.dagger.multibindings.intomap.provides.DaggerIntoMapProvidesC
 import com.madrapps.dagger.multibindings.intomap.provides.IntoMapProvidesComponent;
 import com.madrapps.dagger.multibindings.intomap.provides.stat.DaggerIntoMapStaticProvidesComponent;
 import com.madrapps.dagger.multibindings.intomap.provides.stat.IntoMapStaticProvidesComponent;
+import com.madrapps.dagger.multibindings.intomap.qualifier.DaggerIntoMapQualifierComponent;
+import com.madrapps.dagger.multibindings.intomap.qualifier.IntoMapQualifierComponent;
 import com.madrapps.dagger.multibindings.intoset.binds.DaggerIntoSetBindsComponent;
 import com.madrapps.dagger.multibindings.intoset.binds.IntoSetBindsComponent;
 import com.madrapps.dagger.multibindings.intoset.multimodule.DaggerIntoSetMultiModuleComponent;
@@ -41,6 +43,13 @@ import com.madrapps.dagger.singleton.provides.DaggerSingletenProvidesComponent;
 import com.madrapps.dagger.singleton.provides.SingletenProvidesComponent;
 import com.madrapps.dagger.singleton.provides.stat.DaggerSingletenStaticProvidesComponent;
 import com.madrapps.dagger.singleton.provides.stat.SingletenStaticProvidesComponent;
+import com.madrapps.dagger.subcomponent.direct.DaggerEmptyRootComponent;
+import com.madrapps.dagger.subcomponent.direct.EmptyRootComponent;
+import com.madrapps.dagger.subcomponent.multiple.DaggerMultipleRootComponent;
+import com.madrapps.dagger.subcomponent.multiple.MultipleRootComponent;
+import com.madrapps.dagger.subcomponent.multiple.Parent;
+import com.madrapps.dagger.subcomponent.simple.DaggerSimpleRootComponent;
+import com.madrapps.dagger.subcomponent.simple.SimpleRootComponent;
 
 public class Transportation {
 
@@ -130,10 +139,30 @@ public class Transportation {
         IntoSetQualifierComponent intoSetQualifierComponent = DaggerIntoSetQualifierComponent.create();
         System.out.println("Red = " + intoSetQualifierComponent.redVehicles());
         System.out.println("Green = " + intoSetQualifierComponent.greenVehicles());
+        System.out.println("MainRoad = " + intoSetQualifierComponent.mainRoad());
+
+        IntoMapQualifierComponent intoMapQualifierComponent = DaggerIntoMapQualifierComponent.create();
+        System.out.println("Red = " + intoMapQualifierComponent.redVehicles());
+        System.out.println("Green = " + intoMapQualifierComponent.greenVehicles());
+        System.out.println("Sideroad = " + intoMapQualifierComponent.sideRoad());
 
         IntoMapBoxedKeyComponent intoMapBoxedKeyComponent = DaggerIntoMapBoxedKeyComponent.create();
         System.out.println("Int = " + intoMapBoxedKeyComponent.intVehicles());
         System.out.println("Long = " + intoMapBoxedKeyComponent.longVehicles());
         System.out.println("Class = " + intoMapBoxedKeyComponent.classVehicles());
+        System.out.println("Enum = " + intoMapBoxedKeyComponent.enumVehicles());
+        System.out.println("Enum = " + intoMapBoxedKeyComponent.myKeyStringMap());
+        System.out.println("String = " + intoMapBoxedKeyComponent.stringVehicles());
+
+        SimpleRootComponent simpleRootComponent = DaggerSimpleRootComponent.create();
+        System.out.println("Vehicle = " + simpleRootComponent.obtainVehicle());
+        System.out.println("Sea = " + simpleRootComponent.seaways());
+
+        EmptyRootComponent emptyRootComponent = DaggerEmptyRootComponent.create();
+        System.out.println("Trail = " + emptyRootComponent.component().trail());
+
+        MultipleRootComponent multipleRootComponent = DaggerMultipleRootComponent.create();
+        Parent parent = multipleRootComponent.getParent();
+        System.out.println("Parent = " + parent);
     }
 }

@@ -132,3 +132,18 @@ error: /Users/sthiyagaraj/Me/Madrapps/dagger-playground/src/main/java/com/madrap
 
     <br>
 
+error: /Users/sthiyagaraj/Me/Madrapps/dagger-playground/src/main/java/com/madrapps/dagger/multibindings/intomap/boxedkeys/IntoMapBoxedKeyComponent.java:20: error: @Multibinds methods can only be present within a @Module or @ProducerModule
+
+    <br>
+    
+error: /Users/sthiyagaraj/Me/Madrapps/dagger-playground/src/main/java/com/madrapps/dagger/multibindings/intomap/boxedkeys/IntoMapBoxedKeyModule.java:55: error: @Provides methods may not have more than one map key
+
+    <br>
+    
+e: /Users/sthiyagaraj/Me/Madrapps/dagger-playground/src/main/java/com/madrapps/dagger/subcomponent/simple/SimpleRootComponent.java:10: error: [com.madrapps.dagger.subcomponent.simple.SimpleSubComponent] com.madrapps.dagger.subcomponent.simple.SimpleSubComponent has conflicting scopes:
+public interface SimpleRootComponent {
+       ^
+    com.madrapps.dagger.subcomponent.simple.SimpleRootComponent also has @Singleton
+
+    <br>
+    
