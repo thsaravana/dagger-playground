@@ -1,13 +1,5 @@
 Errors:
 
-
-
-@Component may only be applied to an interface or abstract class
-public class DiComponent {
-       ^
-
-    <br>
-       
 Types may only contain one @Inject constructor
     Car(){}
     ^
@@ -35,9 +27,6 @@ Dagger does not support injection into private constructors
 
     <br>
     
-BindModule is listed as a module, but is not annotated with @Module
-@Component(modules = BindModule.class)
-^
 @Binds methods can only be present within a @Module or @ProducerModule
     abstract Vehicle bindCarToVehicle(Car car);
                      ^
