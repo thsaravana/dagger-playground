@@ -6,5 +6,5 @@ import dagger.Component;
 @Component(modules = IntoMapStaticProvidesModule.class)
 public interface IntoMapStaticProvidesComponent {
 
-    Alley alley();
+    Alley alleyRoute();
 }

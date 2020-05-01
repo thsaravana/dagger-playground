@@ -6,5 +6,5 @@ import dagger.Component;
 @Component(modules = {IntoMapBindsModule.class, IntoMapProvidesModule.class})
 public interface IntoMapMultiModuleComponent {
 
-    Alley alley();
+    Alley alleyWay();
 }

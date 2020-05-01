@@ -1,5 +1,6 @@
 package com.madrapps.dagger.component.builders;
 
+import com.madrapps.dagger.component.factory.FactoryComponent;
 import com.madrapps.dagger.models.Train;
 import com.madrapps.dagger.models.Truck;
 import com.madrapps.dagger.models.Vehicle;

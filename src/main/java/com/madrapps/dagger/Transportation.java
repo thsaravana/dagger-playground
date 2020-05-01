@@ -82,11 +82,11 @@ public class Transportation {
         System.out.println(alley1.vehicleMap);
 
         IntoMapMultiModuleComponent intoMapMultiModuleComponent = DaggerIntoMapMultiModuleComponent.create();
-        Alley alley2 = intoMapMultiModuleComponent.alley();
+        Alley alley2 = intoMapMultiModuleComponent.alleyWay();
         System.out.println(alley2.vehicleMap);
 
         IntoMapStaticProvidesComponent intoMapStaticProvidesComponent = DaggerIntoMapStaticProvidesComponent.create();
-        Alley alley3 = intoMapStaticProvidesComponent.alley();
+        Alley alley3 = intoMapStaticProvidesComponent.alleyRoute();
         System.out.println(alley3.vehicleMap);
 
         SingletenComponent singletenComponent = DaggerSingletenComponent.create();
