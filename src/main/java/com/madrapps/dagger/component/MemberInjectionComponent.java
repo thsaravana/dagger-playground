@@ -8,5 +8,5 @@ public interface MemberInjectionComponent {
 
     Street inject(Street street);
 
-    void injection(Street street);
+    void injection(String street);
 }

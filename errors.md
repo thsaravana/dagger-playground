@@ -94,12 +94,6 @@ public interface SingletenComponent {
                           ^
                           
       <br>
-      
-@Component has more than one @Component.Builder or @Component.Factory: [BuilderComponent.Builder, BuilderComponent.Factory]
-public interface BuilderComponent {
-       ^
-       
-       <br>
        
 Members injection methods may only return the injected type or void.
     Highways inject(Street street);
@@ -136,3 +130,14 @@ public interface SimpleRootComponent {
 
     <br>
     
+    
+error: Dagger does not support injection into private constructors
+error: Dagger does not support injection into private fields
+error: Dagger does not support injection into private methods
+
+error: Types may only contain one @Inject constructor
+
+error: @Scope annotations are not allowed on @Inject constructors; annotate the class instead
+
+error: @Qualifier annotations are not allowed on @Inject constructors
+
