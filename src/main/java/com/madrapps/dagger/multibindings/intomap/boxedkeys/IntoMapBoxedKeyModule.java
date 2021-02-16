@@ -83,7 +83,7 @@ public class IntoMapBoxedKeyModule {
 
     @Provides @IntoMap
     @MyKey(name = "def", implementingClass = Long.class, thresholds = {1, 2, 3})
-    static String provideDef1510Value() {
+    static String provideDef123Value() {
         return "bar";
     }
 

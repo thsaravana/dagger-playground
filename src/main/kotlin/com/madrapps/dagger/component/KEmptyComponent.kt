@@ -2,8 +2,11 @@ package com.madrapps.dagger.component
 
 import com.madrapps.dagger.models.Truck
 import dagger.Component
+import dagger.MembersInjector
+import dagger.Module
+import dagger.Provides
 
-@Component
+@Component(modules = [KTestModule::class])
 interface KEmptyComponent {
 
     fun truck(): Truck
@@ -16,5 +19,15 @@ interface KEmptyComponent {
 
 @Component
 interface KAnotherComponent {
+
+}
+
+@Module
+class KTestModule {
+
+    @Provides
+    fun car1(): Set<MembersInjector<*>>? {
+        return null
+    }
 
 }

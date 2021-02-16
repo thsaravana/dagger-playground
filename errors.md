@@ -141,3 +141,8 @@ error: @Scope annotations are not allowed on @Inject constructors; annotate the 
 
 error: @Qualifier annotations are not allowed on @Inject constructors
 
+java.lang.IllegalArgumentException: cycle was annotated with more than one @Qualifier annotation
+error: A single dependency request may not use more than one @Qualifier
+
+error: A single binding may not declare more than one @Scope
+

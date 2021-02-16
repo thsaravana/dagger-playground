@@ -1,9 +1,14 @@
 package com.madrapps.dagger.models;
 
+import com.madrapps.dagger.scopes.Primary;
+
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 public class Street implements Road {
 
+    @Primary
+    @Singleton
     @Inject
     Truck truck;
 
